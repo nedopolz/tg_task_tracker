@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "tg-task-tracker"
+version = "0.1.0"
+description = ""
+authors = ["Aidar Rakhmatullin <nedopolz@gmail.com>"]
+readme = "README.md"
+packages = [{include = "tg_task_tracker"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiogram = "^2.25.1"
+uvloop = "^0.17.0"
+notion-client = "^2.0.0"
+todoist-api-python = "^2.0.2"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
