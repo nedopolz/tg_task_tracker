@@ -3,9 +3,9 @@ from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.builtin import CommandHelp
 from aiogram.types import CallbackQuery
 
-from src.loader import dp, controller
-from src.utils.API.baseAPI import ToDoItem, ColorEnum
-from src.utils.keyboards import create_active_to_do_keyboard, color_keyboard, menu
+from loader import dp, controller
+from utils.API.baseAPI import ToDoItem, ColorEnum
+from utils.keyboards import create_active_to_do_keyboard, color_keyboard, menu
 
 
 @dp.callback_query_handler(text_contains="list_all")

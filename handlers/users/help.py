@@ -1,6 +1,6 @@
 from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandHelp
-from src.loader import dp
+from loader import dp
 
 
 @dp.message_handler(CommandHelp())

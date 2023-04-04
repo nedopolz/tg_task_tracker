@@ -1,6 +1,6 @@
 from notion_client import AsyncClient
 
-from src.utils.API.baseAPI import BaseAPI, ToDoItem, APIException, ColorEnum
+from utils.API.baseAPI import BaseAPI, ToDoItem, APIException, ColorEnum
 
 
 class Notion(BaseAPI):

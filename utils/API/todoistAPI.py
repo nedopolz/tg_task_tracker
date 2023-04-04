@@ -1,6 +1,6 @@
 from todoist_api_python.api_async import TodoistAPIAsync
 
-from src.utils.API.baseAPI import BaseAPI, APIException, ToDoItem
+from utils.API.baseAPI import BaseAPI, APIException, ToDoItem
 
 
 class ToDoist(BaseAPI):

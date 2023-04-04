@@ -2,9 +2,9 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
 from data import config
-from src.data.config import NOTION_API_KEY, NOTION_DATABASE_ID, NOTION_PAGE_ID, TODOIST_API_KEY, TODOIST_PROJECT_ID
-from src.utils.API.APIcontroller import Controller
-from src.utils.API.todoistAPI import ToDoist
+from data.config import NOTION_API_KEY, NOTION_DATABASE_ID, NOTION_PAGE_ID, TODOIST_API_KEY, TODOIST_PROJECT_ID
+from utils.API.APIcontroller import Controller
+from utils.API.todoistAPI import ToDoist
 from utils.API.notionAPI import Notion
 
 bot = Bot(token=config.BOT_TOKEN, parse_mode=types.ParseMode.HTML)

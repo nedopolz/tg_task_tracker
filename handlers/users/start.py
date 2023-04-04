@@ -2,8 +2,8 @@ from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandStart
 from aiogram.types import CallbackQuery
 
-from src.loader import dp
-from src.utils.keyboards import menu
+from loader import dp
+from utils.keyboards import menu
 
 
 @dp.message_handler(CommandStart())
