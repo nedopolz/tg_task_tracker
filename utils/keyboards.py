@@ -18,8 +18,8 @@ def enum_to_color(enum: ColorEnum) -> str:
 
 
 def get_short_name(full_name: str) -> str:
-    if len(full_name) > 30:
-        return full_name[:27] + "..."
+    if len(full_name) > 20:
+        return full_name[:17] + "..."
     return full_name
 
 

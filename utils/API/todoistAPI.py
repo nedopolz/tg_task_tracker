@@ -15,7 +15,6 @@ class ToDoist(BaseAPI):
 
     async def get_id_by_name(self, name: str) -> str:
         name = name.replace(",", "")
-        print(name)
         item = await self.todoist.get_tasks(**{"filter": f"search: {name} & created: today"})
         if len(item) > 0:
             return item[0].id
