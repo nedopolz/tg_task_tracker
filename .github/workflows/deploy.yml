@@ -18,7 +18,7 @@ jobs:
         password: ${{ secrets.SSH_PASSWORD }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-            cd ${{ secrets.PROJECT_FOLDER }}
+            cd ${{ secrets.PROJECT_FOLDER}}
             git pull
             docker stop notion
             docker build -t notion .
