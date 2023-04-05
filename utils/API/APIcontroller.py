@@ -21,7 +21,6 @@ class Controller:
         task_text = task_text.replace("...", "")
         for task in result:
             if task_text in task.name:
-
                 await self._mark_as_done(task)
         return True
 
