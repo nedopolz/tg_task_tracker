@@ -13,6 +13,7 @@ uvloop = "^0.17.0"
 notion-client = "^2.0.0"
 todoist-api-python = "^2.0.2"
 python-dotenv = "^1.0.0"
+apscheduler = "^3.10.1"
 
 
 [build-system]
