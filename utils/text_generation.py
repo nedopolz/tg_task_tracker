@@ -19,5 +19,5 @@ def create_active_to_do_message(todos: list[ToDoItem]) -> str:
     base_text = "{} - {} - {}\n"
     result = "На сегодня у нас:\n"
     for count, todo in enumerate(todos):
-        result += base_text.format(count+1, todo.name, enum_to_color(todo.color))
+        result += base_text.format(count + 1, todo.name, enum_to_color(todo.color))
     return result

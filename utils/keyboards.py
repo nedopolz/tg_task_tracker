@@ -29,33 +29,35 @@ def create_active_to_do_keyboard(todos: list[ToDoItem]) -> InlineKeyboardMarkup:
     for todo in todos:
         short_name = get_short_name(todo.name)
         color = enum_to_color(todo.color)
-        keyboard.add(InlineKeyboardButton(text=base_text.format(short_name, color),
-                                          callback_data=f"task_name:{short_name}"))
+        keyboard.add(
+            InlineKeyboardButton(
+                text=base_text.format(short_name, color),
+                callback_data=f"task_name:{short_name}",
+            )
+        )
     keyboard.add(back_button)
     return keyboard
 
 
-color_keyboard = InlineKeyboardMarkup(
-    row_width=5,
-    resize_keyboard=True
-)
+color_keyboard = InlineKeyboardMarkup(row_width=5, resize_keyboard=True)
 color_keyboard.row(
-    InlineKeyboardButton(text="🍀", callback_data='color:green'),
+    InlineKeyboardButton(text="🍀", callback_data="color:green"),
     InlineKeyboardButton(text="🐬", callback_data="color:blue"),
     InlineKeyboardButton(text="🌝", callback_data="color:yellow"),
     InlineKeyboardButton(text="💼", callback_data="color:brown"),
-    InlineKeyboardButton(text="💥", callback_data="color:red"))
+    InlineKeyboardButton(text="💥", callback_data="color:red"),
+)
 
 menu = InlineKeyboardMarkup(
     inline_keyboard=[
         [
-            InlineKeyboardButton(text="Список задач", callback_data='list_all'),
+            InlineKeyboardButton(text="Список задач", callback_data="list_all"),
         ],
         [
-            InlineKeyboardButton(text="Синхронизировать списки", callback_data='sync'),
-        ]
+            InlineKeyboardButton(text="Синхронизировать списки", callback_data="sync"),
+        ],
     ],
-    resize_keyboard=True
+    resize_keyboard=True,
 )
 
 back_button = InlineKeyboardButton(text="Назад", callback_data="back")

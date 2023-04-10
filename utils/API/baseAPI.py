@@ -23,6 +23,11 @@ class ToDoItem:
 
 
 class BaseAPI(ABC):
+    def __new__(cls, *args, **kwargs):
+        if not hasattr(cls, "instance"):
+            cls.instance = super(BaseAPI, cls).__new__(cls)
+        return cls.instance
+
     @abstractmethod
     async def create_todo(self, todo: ToDoItem) -> bool | APIException:
         pass
