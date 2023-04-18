@@ -16,19 +16,19 @@ class ToDoist(BaseAPI):
         )
         return True
 
-    async def get_id_by_name(self, name: str) -> str:
+    async def get_ids_by_name(self, name: str) -> list[str]|None:
         name = name.replace(",", "")
         name = name[:15]
         item = await self.todoist.get_tasks(**{"filter": f"search: {name}"})
         if len(item) > 0:
-            return item[0].id
-        return ""
+            return [i.id for i in item]
 
     async def mark_as_done(self, todo: ToDoItem) -> bool | APIException:
-        task_id = await self.get_id_by_name(todo.name)
-        if not task_id:
+        task_ids = await self.get_ids_by_name(todo.name)
+        if not task_ids:
             return False
-        await self.todoist.close_task(task_id=task_id)
+        for task in task_ids:
+            await self.todoist.close_task(task_id=task)
         return True
 
     async def list_todo(self) -> list[ToDoItem | None] | APIException:

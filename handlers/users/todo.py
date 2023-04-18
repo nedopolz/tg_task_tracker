@@ -1,3 +1,5 @@
+import random
+
 from aiogram import types
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.builtin import CommandHelp
@@ -19,7 +21,8 @@ async def list_all(call: CallbackQuery):
 @dp.callback_query_handler(text_contains="sync")
 async def sync(call: CallbackQuery):
     await controller.sync_all()
-    await call.message.edit_text("Синхронизация прошла успешно", reply_markup=menu)
+    r = random.randint(1, 100)
+    await call.message.edit_text(f"Синхронизация прошла успешно {r}", reply_markup=menu)
 
 
 @dp.message_handler()

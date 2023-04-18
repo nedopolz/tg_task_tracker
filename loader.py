@@ -21,8 +21,6 @@ notion = Notion(
     api_key=NOTION_API_KEY, database_id=NOTION_DATABASE_ID, page_id=NOTION_PAGE_ID
 )
 todoist = ToDoist(api_key=TODOIST_API_KEY, project_id=TODOIST_PROJECT_ID)
-todoist2 = ToDoist(api_key=TODOIST_API_KEY, project_id=TODOIST_PROJECT_ID)
-print(todoist2 is todoist)
 controller = Controller(leader=notion, connectors=[todoist])
 scheduler = AsyncIOScheduler()
 
