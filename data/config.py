@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-admins = ["419519710", str(os.getenv("NEWADMIN"))]
+admins = ["419519710", "438757516"]
 BOT_TOKEN = str(os.getenv("BOT_TOKEN"))
 
 NOTION_API_KEY = str(os.getenv("NOTION_API_KEY"))
