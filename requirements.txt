@@ -64,7 +64,7 @@ trove-classifiers==2023.3.9
 tzdata==2023.3
 tzlocal==4.3
 urllib3==1.26.15
-uvloop==0.4.12
+uvloop==0.17.0
 virtualenv==20.21.0
 webencodings==0.5.1
 yarl==1.8.2
